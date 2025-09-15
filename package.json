@@ -1,12 +1,17 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "somnia-devlab",
+  "version": "1.0.0",
   "private": true,
+  "description": "The ultimate developer tool suite for Somnia Network - featuring real-time monitoring, replay debugging, performance profiling, and chaos testing",
   "scripts": {
+    "backend": "cd backend && npm run dev",
     "build": "next build",
+    "compile:contracts": "cd contracts && npx hardhat compile",
+    "deploy:contracts": "cd contracts && npx hardhat run scripts/deploy.js --network somnia",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "test:contracts": "cd contracts && npx hardhat test"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
